@@ -26,11 +26,11 @@ const Navbar = (props) => {
         <div className="flex items-center justify-between p-6  max-w-[90rem] mx-auto">
           <div className="2xl:w-60 w-40  ">
             <img
-              className="object-contain  hidden lg:inline-block"
+              className="object-contain  hidden lg:inline-block -mb-2 -mt-2 "
               src={props.bg === "white" ? "/logo.png" : "/logo2.png"}
             ></img>
             <img
-              className="object-contain w-16 h-16 lg:hidden"
+              className="object-contain w-12 h-12 -mb-2 -mt-2 lg:hidden"
               src={"/logo3.png"}
             ></img>
           </div>

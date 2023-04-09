@@ -35,7 +35,7 @@ export default function Home(props) {
         <Technologies></Technologies>
         <Success></Success>
         <WhyChose></WhyChose>
-        <OurValues></OurValues>
+        {/* <OurValues></OurValues> */}
         <Testimonials deviceType={props.deviceType}></Testimonials>
         <ContactUs></ContactUs>
         <Links></Links>
