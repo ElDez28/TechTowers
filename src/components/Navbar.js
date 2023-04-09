@@ -175,7 +175,7 @@ const Navbar = (props) => {
             </div>
           </div>
           {!isOpen && (
-            <div onClick={openModal} className="xl:hidden cursor-pointer">
+            <div onClick={openModal} className="xl:hidden block cursor-pointer">
               <GiHamburgerMenu
                 className={`${
                   props.bg === "white" ? "text-primary " : "text-white"
