@@ -91,7 +91,7 @@ const Links = () => {
           </div>
         </div>
       </div>
-      <div className="py-6 text-center text-gray-200 bg-[#161e29]">
+      <div className="py-6 px-4 text-center text-gray-200 bg-[#161e29]">
         <span>© Copyright Tech Towers 2023. All Rights Reserved</span>
       </div>
     </section>
