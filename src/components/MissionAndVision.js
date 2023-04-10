@@ -34,7 +34,7 @@ const Item = ({ image, title, list, animation }) => {
         src={image}
         alt="logo"
       ></Image>
-      <div className="w-full h-full pt-48 px-8 pb-8">
+      <div className="w-full h-full pt-48 lg:px-8 px-4 pb-8">
         <div className=" text-gray-500 flex flex-col justify-between bg-white h-full bg-opacity-80 p-12 z-10 mx-auto rounded-lg group-hover:bg-primary group-hover:text-white transition-colors duration-500">
           <h4 className="text-2xl font-semibold mb-6">{title}</h4>
           <ul className="text-left flex flex-col gap-4 list-disc ">

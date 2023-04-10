@@ -14,7 +14,7 @@ const WhyChose = () => {
 
   return (
     <section className="pb-24 border-b mt-24">
-      <div className="max-w-[90rem] mx-auto px-8  text-center text-gray-700">
+      <div className="max-w-[90rem] mx-auto lg:px-8 px-4  text-center text-gray-700">
         <Header title="WHY CHOOSE TECH TOWERS"></Header>
         <p className="max-w-6xl mx-auto mb-16">
           At Tech Towers, we are committed to providing our clients with the

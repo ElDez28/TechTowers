@@ -4,7 +4,7 @@ import { IoIosArrowForward } from "react-icons/io";
 const Links = () => {
   return (
     <section className="pt-16 bg-[#041327] ">
-      <div className="max-w-[90rem] mx-auto  px-8 text-left md:text-center pb-16">
+      <div className="max-w-[90rem] mx-auto  px-4 lg:px-8 text-left md:text-center pb-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 items-start ">
           <div className="flex flex-col gap-2 lg:flex-1 text-gray-200 text-left text-md">
             <div>

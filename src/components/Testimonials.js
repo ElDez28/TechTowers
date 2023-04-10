@@ -7,7 +7,7 @@ const responsive = {
   desktop: {
     breakpoint: {
       max: 3000,
-      min: 1024,
+      min: 1280,
     },
     items: 2,
     partialVisibilityGutter: 40,
@@ -22,7 +22,7 @@ const responsive = {
   },
   tablet: {
     breakpoint: {
-      max: 1024,
+      max: 1280,
       min: 640,
     },
     items: 1,
@@ -31,11 +31,14 @@ const responsive = {
 };
 const SlideItem = ({ role, name, text, image }) => {
   return (
-    <div className="card-wrapper px-8  flex ">
-      <div className="-mr-[40px] mt-12 z-20 border-white border-8 rounded-lg overflow-hidden w-64 h-max ">
-        <img className="w-full object-cover" src={image}></img>
+    <div className="card-wrapper lg:px-8 px-4  flex lg:h-[330px] ">
+      <div className="hidden md:block -mr-[4.5rem] mt-12 z-20 rounded-lg border-white border-8 min-h-[128px]  min-w-[128px] max-h-[128px] max-w-[128px] ">
+        <img className="w-full object-cover rounded-lg" src={image}></img>
       </div>
-      <div className="card px-12 pl-16 py-12 shadow-lg bg-white text-left flex gap-6">
+      <div className="card px-12 py-12 lg:pl-24 shadow-lg bg-white text-left flex flex-col gap-6">
+        <div className=" md:hidden   z-20  w-32 h-max ">
+          <img className="w-full object-cover rounded-lg" src={image}></img>
+        </div>
         <div>
           <h3 className="w-full font-bold text-lg">{name}</h3>
           <span className="w-full ">{role}</span>
@@ -50,7 +53,7 @@ const SlideItem = ({ role, name, text, image }) => {
 const Testimonials = (props) => {
   return (
     <>
-      <section className="mt-24 py-16 bg-[#edf2f5]">
+      <section className="py-24 bg-[#edf2f5]">
         <div className="max-w-[90rem] mx-auto   text-center">
           <Header title="TESTIMONIALS"></Header>
           <p className="mb-12">Why do customers praise about Tech Towers?</p>

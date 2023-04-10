@@ -13,8 +13,8 @@ const Experience = () => {
   });
 
   return (
-    <section className=" border-b-2 py-32 ">
-      <div className="max-w-[90rem] mx-auto  text-center px-8">
+    <section className=" border-b-2 py-24 ">
+      <div className="max-w-[90rem] mx-auto  text-center px-4 lg:px-8">
         <Header title="OVER 12 YEARS EXPERIENCE IN SOFTWARE OUTSOURCING"></Header>
         <div className="flex flex-col md:flex-row justify-between items-center gap-12 mt-12">
           <div className="flex-1">

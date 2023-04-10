@@ -39,10 +39,10 @@ const ContactUs = () => {
   }, [inView]);
 
   return (
-    <section ref={ref} className="py-24 bg-[#edf2f5]">
+    <section ref={ref} className="pb-24 bg-[#edf2f5]">
       <motion.div
         animate={animation}
-        className="max-w-[90rem] mx-auto px-8  text-center"
+        className="max-w-[90rem] mx-auto lg:px-8 px-4  text-center"
       >
         <Header title="CONTACT US"></Header>
         <p>Contact TechTowers</p>

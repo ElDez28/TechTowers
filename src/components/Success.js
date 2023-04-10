@@ -19,7 +19,7 @@ const Success = () => {
 
   return (
     <section className="mt-24 text-gray-700 min-h-[728px]">
-      <div className="max-w-[90rem] mx-auto px-8  text-center">
+      <div className="max-w-[90rem] mx-auto lg:px-8 px-4  text-center">
         <Header title="THE SIX STEPS TO SOFTWARE SUCCESS"></Header>
         <p className="max-w-6xl mx-auto mb-16">
           How Tech Towers Brings Your Project to Life, At our company, we follow

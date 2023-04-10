@@ -50,7 +50,7 @@ const OurValues = () => {
 
   return (
     <section ref={ref} className="mt-24 text-gray-700">
-      <div className="max-w-[90rem] mx-auto text-center px-8 ">
+      <div className="max-w-[90rem] mx-auto text-center px-4 lg:px-8 ">
         <Header title="OUR VALUES"></Header>
         <div className="flex mt-24 justify-center  flex-col gap-12 md:flex-row mb-20">
           <motion.div

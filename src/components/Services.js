@@ -19,7 +19,7 @@ const Services = () => {
           Laborum repudiandae omnis voluptatum consequatur mollitia ea est
           voluptas ut
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 px-8 max-h-max">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 px-4 lg:px-8 max-h-max">
           <div className=" rounded-lg group relative xs:text-xs sm:text-base  text-base lg:text-base ">
             <div className="overflow-hidden rounded-2xl  ">
               <img

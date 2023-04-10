@@ -7,7 +7,7 @@ const Technologies = () => {
       <div className="max-w-[90rem] mx-auto   text-center">
         <Header title="TECHNOLOGIES WE USE!"></Header>
 
-        <div className="grid grid-cols-3 md:grid-cols-5 xl:grid-cols-6 gap-24 px-8 mt-32">
+        <div className="grid grid-cols-3 md:grid-cols-5 xl:grid-cols-6 gap-12 lg:gap-24 lg:px-8 px-4 mt-20">
           <div className="w-full h-full flex items-center justify-center group ">
             <img
               className="object-contain  group-hover:scale-110 transition-transform duration-500"

@@ -6,14 +6,14 @@ import JourneyCard from "./JourneyCard";
 import Header from "./Header";
 const Journey = () => {
   return (
-    <section className="border-b-2 py-32">
+    <section className="border-b-2 pt-12 pb-24 xl:py-24">
       <div className="max-w-[90rem] mx-auto mt-12  text-center ">
         <Header title="LET'S START OUR JOURNEY TOGETHER!"></Header>
-        <p className="text-lg mb-12 px-12">
+        <p className="text-lg mb-12 px-8">
           Business challenges become opportunities with the right software
           partner.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 px-8 max-h-max ">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 px-4 lg:px-8 max-h-max ">
           <JourneyCard
             icon={<IoEarth></IoEarth>}
             text="Our software services have been designed to minimize your costs,
