@@ -1,4 +1,3 @@
-import React from "react";
 import { BiCheckDouble } from "react-icons/bi";
 const Value = ({ text, title }) => {
   return (

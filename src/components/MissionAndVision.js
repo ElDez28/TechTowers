@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useInView } from "react-intersection-observer";
-import { useAnimation, motion, inView } from "framer-motion";
+import { motion } from "framer-motion";
 import { BsArrowRight } from "react-icons/bs";
 const listOne = [
   "We are committed to providing exceptional customer service and tailored solutions that meet the unique needs and requirements of our clients.",
@@ -21,10 +19,53 @@ const listTwo = [
   "We aspire to build long-term relationships with our clients by delivering exceptional customer service and tailored solutions.",
   "Our vision is to help businesses across industries achieve their goals through customized software solutions that drive efficiency, productivity, and growth.",
 ];
-const Item = ({ image, title, list, animation }) => {
+export const variantOne = {
+  hidden: { opacity: 0, y: 100 },
+  visible: {
+    opacity: 1,
+    y: 0,
+
+    transition: {
+      type: "tween",
+      duration: 0.6,
+      delay: 0.2,
+    },
+  },
+  exit: {
+    opacity: 0,
+    transition: {
+      type: "tween",
+      duration: 0.6,
+    },
+  },
+};
+export const variantTwo = {
+  hidden: { opacity: 0, y: 200 },
+  visible: {
+    opacity: 1,
+    y: 0,
+
+    transition: {
+      type: "tween",
+      duration: 0.6,
+      delay: 0.2,
+    },
+  },
+  exit: {
+    opacity: 0,
+    transition: {
+      type: "tween",
+      duration: 0.6,
+    },
+  },
+};
+const Item = ({ image, title, list, variants }) => {
   return (
     <motion.div
-      animate={animation}
+      variants={variants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
       className="flex-1 relative overflow-hidden rounded-lg group "
     >
       <Image
@@ -54,60 +95,16 @@ const Item = ({ image, title, list, animation }) => {
   );
 };
 const MissionAndVision = () => {
-  const { ref, inView } = useInView({
-    threshold: 0.2,
-  });
-  const [animated, setAnimated] = useState(false);
-  const animationOne = useAnimation();
-  const animationTwo = useAnimation();
-  console.log(inView);
-  useEffect(() => {
-    if (inView & !animated) {
-      animationOne.start({
-        opacity: 1,
-        y: 0,
-        transition: {
-          type: "tween",
-          duration: 1.2,
-          delay: 0.2,
-        },
-      });
-      animationTwo.start({
-        opacity: 1,
-        y: 0,
-        transition: {
-          type: "tween",
-          duration: 1.2,
-          delay: 0.2,
-        },
-      });
-      setAnimated(true);
-    }
-    if (!inView & !animated) {
-      animationOne.start({
-        opacity: 0,
-        y: 100,
-      });
-      animationTwo.start({
-        opacity: 0,
-        y: 200,
-      });
-    }
-  }, [inView]);
-
   return (
-    <div
-      ref={ref}
-      className="grid grid-cols-1 lg:grid-cols-2 gap-6  text-gray-700 "
-    >
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6  text-gray-700 ">
       <Item
-        animation={animationOne}
+        variants={variantOne}
         image="/more-services/more-services-1.jpg"
         list={listOne}
         title="Our Mission"
       ></Item>
       <Item
-        animation={animationTwo}
+        variants={variantTwo}
         image="/more-services/more-services-2.jpg"
         list={listTwo}
         title="Our Vision"

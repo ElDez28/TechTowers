@@ -1,5 +1,3 @@
-import React from "react";
-
 const SuccessItems = ({ title, text, image }) => {
   return (
     <div className="flex gap-6 flex-col lg:flex-row">
@@ -8,7 +6,7 @@ const SuccessItems = ({ title, text, image }) => {
         <p className="italic">{text}</p>
       </div>
       <div className="flex-1 order-first lg:order-last">
-        <img src={image}></img>
+        <img src={image} alt="buissness illustrations"></img>
       </div>
     </div>
   );

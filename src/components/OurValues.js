@@ -1,60 +1,59 @@
-import React, { useEffect, useState } from "react";
 import Header from "./Header";
-import { useAnimation, motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
+
 import Value from "./Value";
 import MissionAndVision from "./MissionAndVision";
+export const variantOne = {
+  hidden: { opacity: 0, x: "20vh" },
+  visible: {
+    opacity: 1,
+    x: 0,
 
+    transition: {
+      type: "tween",
+      duration: 0.6,
+      delay: 0.2,
+    },
+  },
+  exit: {
+    opacity: 0,
+    transition: {
+      type: "tween",
+      duration: 0.6,
+    },
+  },
+};
+export const variantTwo = {
+  hidden: { opacity: 0, x: "-20vh" },
+  visible: {
+    opacity: 1,
+    x: 0,
+
+    transition: {
+      type: "tween",
+      duration: 0.6,
+      delay: 0.2,
+    },
+  },
+  exit: {
+    opacity: 0,
+    transition: {
+      type: "tween",
+      duration: 0.6,
+    },
+  },
+};
 const OurValues = () => {
-  const [animated, setAnimated] = useState(false);
-  const animationOne = useAnimation();
-  const animationTwo = useAnimation();
-  const { ref, inView } = useInView({
-    threshold: 0.1,
-  });
-
-  useEffect(() => {
-    if (inView & !animated) {
-      animationOne.start({
-        opacity: 1,
-        x: 0,
-        transition: {
-          type: "tween",
-          duration: 1.2,
-
-          delay: 0.2,
-        },
-      });
-      animationTwo.start({
-        opacity: 1,
-        x: 0,
-        transition: {
-          type: "tween",
-          duration: 1.2,
-          delay: 0.2,
-        },
-      });
-      setAnimated(true);
-    }
-    if (!inView & !animated) {
-      animationOne.start({
-        opacity: 0,
-        x: "20vh",
-      });
-      animationTwo.start({
-        opacity: 0,
-        x: "-20vh",
-      });
-    }
-  }, [inView]);
-
   return (
-    <section ref={ref} className="mt-24 text-gray-700">
+    <section className="mt-24 text-gray-700 pb-24">
       <div className="max-w-[90rem] mx-auto text-center px-4 lg:px-8 ">
         <Header title="OUR VALUES"></Header>
         <div className="flex mt-24 justify-center  flex-col gap-12 md:flex-row mb-20">
           <motion.div
-            animate={animationOne}
+            variants={variantOne}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
             className="flex flex-col gap-4 w-full"
           >
             <Value
@@ -80,7 +79,10 @@ const OurValues = () => {
             ></Value>
           </motion.div>
           <motion.div
-            animate={animationTwo}
+            variants={variantTwo}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
             className="flex flex-col gap-4 w-full"
           >
             <Value

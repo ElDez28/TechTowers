@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 const variants = {
@@ -84,7 +84,7 @@ const Hero = (props) => {
   return (
     <section
       ref={ref}
-      className="bg-[url('../../public/intro-bg.png')] py-32 lg:bg-fixed bg-center  bg-cover bg-no-repeat mb-12"
+      className="bg-[url('../../public/intro-bg.png')] py-32 lg:bg-fixed bg-center  bg-cover bg-no-repeat mb-8"
     >
       <div className="max-w-[90rem] px-6 flex justify-between gap-4 items-center mx-auto flex-col xl:flex-row mt-20">
         <div className="text-white flex-1 px-4 order-last xl:order-first text-center xl:text-left">
@@ -94,8 +94,7 @@ const Hero = (props) => {
             animate="animate"
             className="lg:text-5xl text-3xl flex flex-col lg:gap-4 gap-2  font-bold mb-2  tracking-wider"
           >
-            <span> Better Digital Experience</span>
-            <span> With TECH TOWER</span>
+            <h1 className="leading-snug"> {props.t("main_header")}</h1>
           </motion.div>
           <motion.h2
             variants={variantsTwo}
@@ -103,7 +102,7 @@ const Hero = (props) => {
             animate="animate"
             className="xl:text-2xl text-lg font-medium mb-8 tracking-wider"
           >
-            CUSTOM SOFTWARE DEVELOPMENT
+            {props.t("first_subheading")}
           </motion.h2>
           <motion.h3
             variants={variantsThree}
@@ -111,7 +110,7 @@ const Hero = (props) => {
             animate="animate"
             className="xl:text-2xl text-lg mb-12 font-semibold tracking-wider"
           >
-            Best outsourcing solutions for your business
+            {props.t("second_subheading")}
           </motion.h3>
           <motion.button
             variants={variantsFour}
@@ -119,7 +118,7 @@ const Hero = (props) => {
             animate="animate"
             className=" border-white px-6 py-4 border-2 rounded-full text-lg font-semibold"
           >
-            Get Started
+            {props.t("get_started")}
           </motion.button>
         </div>
         <div className="flex-1 p-6 order-first xl:order-last animate-up-down">
@@ -129,6 +128,7 @@ const Hero = (props) => {
             animate="animate"
             className="w-full"
             src="/heross.png"
+            alt="floating computer"
           ></motion.img>
         </div>
       </div>

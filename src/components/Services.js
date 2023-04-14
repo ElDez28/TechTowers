@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from "react";
-import Card from "./Card";
-import { useRef } from "react";
 import { BsCodeSlash } from "react-icons/bs";
 import { BsPersonBoundingBox } from "react-icons/bs";
 import { BsEasel } from "react-icons/bs";
+
 const Services = () => {
   return (
     <section className="pb-24 ">
@@ -24,6 +22,7 @@ const Services = () => {
             <div className="overflow-hidden rounded-2xl  ">
               <img
                 src="/services/services-1.jpg"
+                alt="People in office"
                 className="w-full object-cover group-hover:scale-125 transition-all duration-700"
               ></img>
             </div>
@@ -52,6 +51,7 @@ const Services = () => {
             <div className="overflow-hidden rounded-2xl  ">
               <img
                 src="/services/services-2.jpg"
+                alt="Person typing on their laptop"
                 className="w-full object-cover group-hover:scale-125 transition-all duration-700"
               ></img>
             </div>
@@ -82,6 +82,7 @@ const Services = () => {
               <img
                 src="/services/services-3.jpg"
                 className="w-full object-cover group-hover:scale-125 transition-all duration-700"
+                alt="Person looking in their laptop"
               ></img>
             </div>
             <div className="w-[85%] lg:h-[424px] md:h-[460px] mx-auto bg-white bg-opacity-90 shadow-lg relative -mt-28 px-4 flex flex-col justify-between gap-6  pb-12 rounded-2xl">

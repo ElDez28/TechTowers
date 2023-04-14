@@ -1,4 +1,3 @@
-import React from "react";
 import Header from "./Header";
 import Carousel from "react-multi-carousel";
 import CustomDot from "./CustomDot";
@@ -29,15 +28,23 @@ const responsive = {
     partialVisibilityGutter: 30,
   },
 };
-const SlideItem = ({ role, name, text, image }) => {
+const SlideItem = ({ role, name, text, image, alt }) => {
   return (
     <div className="card-wrapper lg:px-8 px-4  flex lg:h-[330px] ">
       <div className="hidden md:block -mr-[4.5rem] mt-12 z-20 rounded-lg border-white border-8 min-h-[128px]  min-w-[128px] max-h-[128px] max-w-[128px] ">
-        <img className="w-full object-cover rounded-lg" src={image}></img>
+        <img
+          className="w-full object-cover rounded-lg"
+          src={image}
+          alt={alt}
+        ></img>
       </div>
       <div className="card px-12 py-12 lg:pl-24 shadow-lg bg-white text-left flex flex-col gap-6">
         <div className=" md:hidden   z-20  w-32 h-max ">
-          <img className="w-full object-cover rounded-lg" src={image}></img>
+          <img
+            className="w-full object-cover rounded-lg"
+            src={image}
+            alt={alt}
+          ></img>
         </div>
         <div>
           <h3 className="w-full font-bold text-lg">{name}</h3>
@@ -96,6 +103,7 @@ const Testimonials = (props) => {
                 <SlideItem
                   image="/testimonials/testimonials-1.jpg"
                   name="Saul Goodman"
+                  alt="Picture of CEO"
                   role="CEO & Founder"
                   text="
              
@@ -112,6 +120,7 @@ const Testimonials = (props) => {
                   image="/testimonials/testimonials-2.jpg"
                   name="William Smith"
                   role="Store Owner"
+                  alt="Picture of Store Owner"
                   text=" We are always looking for ways to incorporate technology into the
             Desert Botanical Garden experience and when Tech Towers presented
             the opportunity to develop experience based app, we jumped at the
@@ -121,6 +130,7 @@ const Testimonials = (props) => {
                   image="/testimonials/testimonials-4.jpg"
                   name="Matt Brandon"
                   role="Freelancer"
+                  alt="Picture of a Freelancer"
                   text="
                   We needed a strong technology partner to deliver affordable and reliable web development services
                   for our client base. We found that Tech Towers meets our needs and our client’s needs for web
@@ -130,6 +140,7 @@ const Testimonials = (props) => {
                 <SlideItem
                   image="/testimonials/testimonials-3.jpg"
                   name="Noah Brown"
+                  alt="Picture of a Designer"
                   role="Designer"
                   text="
              
@@ -143,6 +154,7 @@ const Testimonials = (props) => {
                   image="/testimonials/testimonials-5.jpg"
                   name="John Larson"
                   role="Entrepreneur"
+                  alt="Picture of an Enterpreneur"
                   text="
              
             

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Header from "./Header";
 import { BsJournalCheck } from "react-icons/bs";
 import { BsHourglassTop } from "react-icons/bs";

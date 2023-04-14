@@ -1,5 +1,3 @@
-import React from "react";
-
 const AutoChangingHeader = ({ index, text, changingIndex, onClick }) => {
   return (
     <div

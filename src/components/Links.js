@@ -1,5 +1,4 @@
 import Link from "next/link";
-import React from "react";
 import { IoIosArrowForward } from "react-icons/io";
 const Links = () => {
   return (
@@ -8,7 +7,11 @@ const Links = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 items-start ">
           <div className="flex flex-col gap-2 lg:flex-1 text-gray-200 text-left text-md">
             <div>
-              <img className="h-[40px]" src="/logo2.png"></img>
+              <img
+                className="h-[40px]"
+                src="/logo2.png"
+                alt="tech towers logo"
+              ></img>
             </div>
             <p>
               At Tech Towers, we're passionate about delivering customized
@@ -24,32 +27,35 @@ const Links = () => {
             <ul className="">
               <li className="flex gap-1 items-center border-b-[1px] border-b-lightblue py-2 group">
                 <IoIosArrowForward className="text-primary"></IoIosArrowForward>
-                <Link className="group-hover:text-primary text-sm" href="#">
+                <Link className="group-hover:text-primary text-sm" href="/">
                   Home
                 </Link>
               </li>
               <li className="flex gap-1 items-center border-b-[1px] border-b-lightblue py-2 group">
                 <IoIosArrowForward className="text-primary"></IoIosArrowForward>
-                <Link className="group-hover:text-primary text-sm" href="#">
+                <Link
+                  className="group-hover:text-primary text-sm"
+                  href="/privacy_and_policy"
+                >
                   Privacy & Policy
                 </Link>
               </li>
               <li className="flex gap-1 items-center border-b-[1px] border-b-lightblue py-2 group">
                 <IoIosArrowForward className="text-primary"></IoIosArrowForward>
-                <Link className="group-hover:text-primary text-sm" href="#">
+                <Link
+                  className="group-hover:text-primary text-sm"
+                  href="terms_and_conditions"
+                >
                   Terms & Conditions
                 </Link>
               </li>
               <li className="flex gap-1 items-center border-b-[1px] border-b-lightblue py-2 group">
                 <IoIosArrowForward className="text-primary"></IoIosArrowForward>
-                <Link className="group-hover:text-primary text-sm" href="#">
+                <Link
+                  className="group-hover:text-primary text-sm"
+                  href="/legal_notice"
+                >
                   Legal Notice
-                </Link>
-              </li>
-              <li className="flex gap-1 items-center border-b-[1px] border-b-lightblue py-2 group">
-                <IoIosArrowForward className="text-primary"></IoIosArrowForward>
-                <Link className="group-hover:text-primary text-sm" href="#">
-                  Clients
                 </Link>
               </li>
             </ul>
@@ -62,7 +68,7 @@ const Links = () => {
             </p>
             <span>Petrovo b.b</span>
             <p>
-              <span className="font-semibold">79101</span>
+              <span className="font-semibold">79101 </span>
               Prijedor
             </p>
             <span className="font-bold">Bosnia and Herzegovina</span>

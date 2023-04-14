@@ -1,4 +1,3 @@
-import React from "react";
 import { IoEarth } from "react-icons/io5";
 import { BsGraphUpArrow } from "react-icons/bs";
 import { BsFillPersonBadgeFill } from "react-icons/bs";

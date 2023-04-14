@@ -1,4 +1,3 @@
-import React from "react";
 import { useInView } from "react-intersection-observer";
 import Header from "./Header";
 import { HiOutlineFaceSmile } from "react-icons/hi2";
@@ -18,7 +17,11 @@ const Experience = () => {
         <Header title="OVER 12 YEARS EXPERIENCE IN SOFTWARE OUTSOURCING"></Header>
         <div className="flex flex-col md:flex-row justify-between items-center gap-12 mt-12">
           <div className="flex-1">
-            <img className="object-cover" src="/counts-img.svg"></img>
+            <img
+              className="object-cover"
+              src="/counts-img.svg"
+              alt="two people and trophy"
+            ></img>
           </div>
           <div
             ref={ref}

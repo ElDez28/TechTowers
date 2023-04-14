@@ -1,4 +1,3 @@
-import React from "react";
 import { BsCodeSlash } from "react-icons/bs";
 const Card = (props) => {
   return (
@@ -7,6 +6,7 @@ const Card = (props) => {
         <img
           src={props.image}
           className="w-full object-cover group-hover:scale-125 transition-all duration-700"
+          alt="people_and_technologie"
         ></img>
       </div>
       <div className="w-[85%] h-[32rem] mx-auto bg-white bg-opacity-90 relative -mt-28 px-4 flex flex-col justify-between gap-6  pb-12 rounded-2xl">
