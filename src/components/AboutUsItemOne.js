@@ -41,7 +41,7 @@ export const variantTwo = {
     },
   },
 };
-const AboutUsItemOne = () => {
+const AboutUsItemOne = ({ t }) => {
   return (
     <div className="flex gap-8 flex-col lg:flex-row mb-12">
       <motion.div
@@ -51,25 +51,9 @@ const AboutUsItemOne = () => {
         viewport={{ once: true }}
         className="flex gap-4 flex-col flex-1 order-2 lg:order-1"
       >
-        <h2 className="font-bold text-2xl">About Us</h2>
-        <p>
-          At Tech Towers, we're passionate about delivering customized software
-          solutions that help our clients achieve their goals. Our founder and
-          team lead holds a Master's degree in Computer Science from Germany,
-          and our team of expert developers, designers, quality assurance
-          specialists, and project managers has over 12 years of experience in
-          software development. Each member of our team has passed a rigorous
-          test before joining Tech Towers, ensuring that they possess the skills
-          and expertise necessary to deliver high-quality software solutions.
-        </p>
-        <p>
-          We take pride in our adherence to the highest standards of quality,
-          reliability, and security in all of our software development projects.
-          Our team is comprised of experts in development, design, quality
-          assurance, and project management, who work collaboratively to deliver
-          high-quality software that meets the unique needs and requirements of
-          our clients.
-        </p>
+        <h2 className="font-bold text-2xl">{t("about_us")}</h2>
+        <p>{t("p_1")}</p>
+        <p>{t("p_2")}</p>
         <p>
           We believe that great software requires a deep understanding of the
           client's business and industry, which is why we take the time to

@@ -17,7 +17,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 export default function Home(props) {
   const [bg, setBg] = useState("transparent");
-  const { t: heroT } = useTranslation("home");
+  const { t: homeT } = useTranslation("home");
   const { t: navT } = useTranslation("nav");
 
   return (
@@ -28,11 +28,11 @@ export default function Home(props) {
       </Head>
       <main>
         <Navbar t={navT} bg={bg}></Navbar>
-        <Hero t={heroT} setBg={setBg}></Hero>
+        <Hero t={homeT} setBg={setBg}></Hero>
         <Slider deviceType={props.deviceType}></Slider>
         <Journey></Journey>
         <Experience></Experience>
-        <Services></Services>
+        <Services locale={props.locale} t={homeT}></Services>
         <Technologies></Technologies>
         <Success></Success>
         <WhyChose></WhyChose>
@@ -59,6 +59,7 @@ export async function getServerSideProps(context) {
   return {
     props: {
       deviceType,
+      locale,
       ...(await serverSideTranslations(locale, ["home", "nav"])),
     },
   };

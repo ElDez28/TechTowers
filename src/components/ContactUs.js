@@ -37,12 +37,11 @@ const FlexItem = ({ title, elements }) => {
     </div>
   );
 };
-const ContactUs = ({ main }) => {
+export const ContactUs = ({ main }) => {
   const [error, setError] = useState(null);
   const [open, setOpen] = useState(false);
   const [success, setSuccess] = useState(false);
   const [validate, setValidate] = useState(false);
-  console.log(error);
   const router = useRouter();
   const page =
     router.pathname === "/"

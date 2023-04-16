@@ -2,5 +2,13 @@
   "main_header": "Better Digital Experience With TECH TOWER",
   "first_subheading": "CUSTOM SOFTWARE DEVELOPMENT",
   "second_subheading": "Best outsourcing solutions for your business",
-  "get_started": "Get Started"
+  "get_started": "Get Started",
+  "services": "Our services",
+  "service_1_h": "Custom Software Development",
+  "service_1": "Get software that's tailored to your unique needs and requirements with our custom software development service. Our expert team will work with you to deliver high-quality, user-friendly, and scalable software that enhances your productivity, efficiency, and competitive edge. Contact us today to get started.",
+  "service_2_h": "Add Expertise to Your Team",
+  "service_2": "Need to boost your team's productivity and expertise? Our team augmentation service can help. Rent a developer or add a specialist to your team and get the skills you need to complete your projects on time and on budget. Contact us today to learn more.",
+  "service_3_h": "Full-Service Development",
+  "service_3": "From concept to launch, our full-service development team has you covered. We'll take on your entire project and deliver a turnkey solution that meets your requirements and exceeds your expectations. Let us handle the development, design, quality assurance, and project management, so you can focus on what you do best. Contact us today to get started",
+  "contact_us": "Contact Us Today"
 }

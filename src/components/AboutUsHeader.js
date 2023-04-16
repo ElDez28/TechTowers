@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import Header from "./Header";
 import { useInView } from "react-intersection-observer";
-const AboutUsHeader = (props) => {
+export const AboutUsHeader = (props) => {
   const { ref, inView } = useInView({
     threshold: 0.9,
   });
@@ -29,5 +29,3 @@ const AboutUsHeader = (props) => {
     </section>
   );
 };
-
-export default AboutUsHeader;

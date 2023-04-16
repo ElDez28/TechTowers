@@ -43,7 +43,7 @@ export const variantTwo = {
     },
   },
 };
-const OurValues = () => {
+export const OurValues = () => {
   return (
     <section className="mt-24 text-gray-700 pb-24">
       <div className="max-w-[90rem] mx-auto text-center px-4 lg:px-8 ">
@@ -112,5 +112,3 @@ const OurValues = () => {
     </section>
   );
 };
-
-export default OurValues;

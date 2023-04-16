@@ -9,10 +9,11 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 const Terms = () => {
   const [bg, setBg] = useState("transparent");
   const { t: navT } = useTranslation("nav");
+  const { t: termsT } = useTranslation("terms");
   return (
     <>
       <Head>
-        <title>Terms and Conditions</title>
+        <title>{termsT("title")}</title>
         <meta
           name="description"
           content="More info about our terms and Conditions"
@@ -20,19 +21,19 @@ const Terms = () => {
       </Head>
       <main>
         <Navbar t={navT} bg={bg}></Navbar>
-        <SideHero title="Terms and Conditions" setBg={setBg}></SideHero>
-        <TermsAndConditions></TermsAndConditions>
+        <SideHero title={termsT("title")} setBg={setBg}></SideHero>
+        <TermsAndConditions t={termsT}></TermsAndConditions>
         <ContactUs></ContactUs>
       </main>
     </>
   );
 };
-export async function getServerSideProps(context) {
+export async function getStaticProps(context) {
   const { locale } = context;
 
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["nav"])),
+      ...(await serverSideTranslations(locale, ["nav", "terms"])),
     },
   };
 }

@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 import dynamic from "next/dynamic";
 const DynamicModal = dynamic(() => import("./Modal"));
 
-const Navbar = ({ bg, t }) => {
+export const Navbar = ({ bg, t }) => {
   const { locale, push, asPath } = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [lng, setLng] = useState(false);
