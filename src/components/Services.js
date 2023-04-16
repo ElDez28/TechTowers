@@ -93,7 +93,6 @@ const Services = ({ t, locale }) => {
               ></img>
             </div>
             <div
-              ref={inputRef}
               className={`${
                 locale === "en" ? "md:h-[520px]" : "md:h-[610px] lg:h-[590px]"
               }   w-[85%]  shadow-lg  mx-auto bg-white bg-opacity-90 relative -mt-28 px-4 flex flex-col justify-between gap-4  pb-12 rounded-2xl`}
