@@ -175,12 +175,11 @@ export const Navbar = ({ bg, t }) => {
             >
               <Image
                 alt="flag"
-                className="h-[13px]"
                 src={
                   locale === "en" ? "/flags/us-flag.jpg" : "/flags/ge-flag.jpg"
                 }
                 width={20}
-                height={10}
+                height={13}
               ></Image>
               <span>{locale}</span>
               {lng && (

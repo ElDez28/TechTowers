@@ -5,8 +5,4 @@ const nextConfig = {
   i18n,
 };
 
-// const withBundleAnalyzer = require("@next/bundle-analyzer")({
-//   enabled: process.env.ANALYZE === "true",
-// });
-
 module.exports = nextConfig;
