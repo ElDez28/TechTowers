@@ -27,11 +27,11 @@ export default function Home(props) {
         <meta property="og:url" content="something" />
         <meta property="og:type" content="website" />
         <meta property="fb:app_id" content="your fb app id" />
-        <meta property="og:title" content="Social Media Preview Working?" />
+        <meta property="og:title" content="Tech Towers" />
         <meta name="twitter:card" content="summary" />
         <meta
           property="og:description"
-          content="Hurray!! Yes Social Media Preview is Working"
+          content="It company specialized in providing web development services"
         />
         <meta property="og:image" content={"/tech.png"} />
         <meta name="description" content="It company" />
