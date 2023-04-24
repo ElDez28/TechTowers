@@ -24,7 +24,16 @@ export default function Home(props) {
     <>
       <Head>
         <title>Tech Towers</title>
-        <meta property="og:image" content="/tech.png" />
+        <meta property="og:url" content="something" />
+        <meta property="og:type" content="website" />
+        <meta property="fb:app_id" content="your fb app id" />
+        <meta property="og:title" content="Social Media Preview Working?" />
+        <meta name="twitter:card" content="summary" />
+        <meta
+          property="og:description"
+          content="Hurray!! Yes Social Media Preview is Working"
+        />
+        <meta property="og:image" content={"/tech.png"} />
         <meta name="description" content="It company" />
       </Head>
       <main>
