@@ -24,6 +24,7 @@ export default function Home(props) {
     <>
       <Head>
         <title>Tech Towers</title>
+        <meta property="og:image" content="/tech.png" />
         <meta name="description" content="It company" />
       </Head>
       <main>

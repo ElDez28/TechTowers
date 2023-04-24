@@ -40,7 +40,7 @@ function App({ Component, pageProps }) {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:image" content="/tech.png" />
+        
         <link rel="icon" href="/favicon.png" />
       </Head>
       <main className={`${raleway.variable} font-ral min-h-screen w-full`}>
