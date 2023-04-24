@@ -33,7 +33,7 @@ export default function Home(props) {
           property="og:description"
           content="It company specialized in providing web development services"
         />
-        <meta property="og:image" content={"/tech.png"} />
+        <meta property="og:image" content={"/preview.png"} />
         <meta name="description" content="It company" />
       </Head>
       <main>
