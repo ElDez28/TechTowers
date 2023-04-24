@@ -40,7 +40,15 @@ function App({ Component, pageProps }) {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
+        <meta property="og:url" content="https://tech-towers.vercel.app/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Tech Towers" />
+        <meta name="twitter:card" content="summary" />
+        <meta
+          property="og:description"
+          content="Software engineering with care and commitment We are a software development company founded in 2004 and based in Bucharest, Romania’s main IT hub. We use our technical proficiency to help your business reach its full potential. GET IN TOUCH WE OFFER PEACE OF MIND SBP is a full-stack software development company. We design and build … Home Read M..."
+        />
+        <meta property="og:image" content={"/preview.jpg"} />
         <link rel="icon" href="/favicon.png" />
       </Head>
       <main className={`${raleway.variable} font-ral min-h-screen w-full`}>
