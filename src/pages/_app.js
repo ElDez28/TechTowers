@@ -53,11 +53,16 @@ function App({ Component, pageProps, ip }) {
         <meta property="og:image" content="/favicon.png" />
         <meta property="og:image:width" content="400" />
         <meta property="og:image:height" content="400" />
-        <meta name="twitter:image:src" content="/preview.jpg"></meta>
         <meta property="og:image:" content={"/preview.jpg"} />
-        <meta property="og:image:width" content="400" />
-        <meta property="og:image:height" content="400" />
-
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:site" content="My Website" />
+        <meta name="twitter:site" content="My Website" />
+        <meta name="twitter:title" content="Hello World" />
+        <meta name="twitter:description" content="Lorem ipsum sit dolor" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image:src" content="/preview.jpg" />
+        <meta name="theme-color" content="#FD0054" />
         <link rel="icon" href="/favicon.png" />
       </Head>
       <main className={`${raleway.variable} font-ral min-h-screen w-full`}>
