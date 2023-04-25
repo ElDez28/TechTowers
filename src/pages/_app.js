@@ -50,12 +50,13 @@ function App({ Component, pageProps, ip }) {
           property="og:description"
           content="Software engineering with care and commitment We are a software development company founded in 2004 and based in Bucharest, Romania’s main IT hub. We use our technical proficiency to help your business reach its full potential. GET IN TOUCH WE OFFER PEACE OF MIND SBP is a full-stack software development company. We design and build … Home Read M..."
         />
-        <meta property="og:image:secure_url" content={"/preview.jpg"} />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
         <meta property="og:image" content="/favicon.png" />
         <meta property="og:image:width" content="400" />
         <meta property="og:image:height" content="400" />
+        <meta property="og:image:secure_url" content={"/preview.jpg"} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+
         <link rel="icon" href="/favicon.png" />
       </Head>
       <main className={`${raleway.variable} font-ral min-h-screen w-full`}>
