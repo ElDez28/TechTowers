@@ -53,9 +53,10 @@ function App({ Component, pageProps, ip }) {
         <meta property="og:image" content="/favicon.png" />
         <meta property="og:image:width" content="400" />
         <meta property="og:image:height" content="400" />
+        <meta name="twitter:image:src" content="/preview.jpg"></meta>
         <meta property="og:image:" content={"/preview.jpg"} />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="400" />
 
         <link rel="icon" href="/favicon.png" />
       </Head>
