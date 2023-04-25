@@ -6,17 +6,19 @@ import Script from "next/script";
 import dynamic from "next/dynamic";
 import { usePathname, useSearchParams } from "next/navigation";
 import { useEffect } from "react";
-import { pageview } from "@/lib/gtagHelper";
 import CookieConsent from "react-cookie-consent";
 import { useRouter } from "next/router";
-const DynamicFooter = dynamic(() => import("@/components/Links"));
+const DynamicFooter = dynamic(() => import("@/components/Links"), {
+  loading: () => <p>Loading...</p>,
+});
 
 const raleway = Raleway({
   subsets: ["latin"],
   variable: "--font-ral",
 });
 const ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS;
-function App({ Component, pageProps }) {
+function App({ Component, pageProps, ip }) {
+  console.log(ip);
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
@@ -105,5 +107,15 @@ function App({ Component, pageProps }) {
     </>
   );
 }
-
+export async function getServerSideProps({ req }) {
+  const forwarded = req.headers["x-forwarded-for"];
+  const ip = forwarded
+    ? forwarded.split(/, /)[0]
+    : req.connection.remoteAddress;
+  return {
+    props: {
+      ip,
+    },
+  };
+}
 export default appWithTranslation(App);

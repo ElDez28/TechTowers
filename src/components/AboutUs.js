@@ -1,6 +1,6 @@
 import AboutUsItemOne from "./AboutUsItemOne";
 import AboutItemTwo from "./AboutItemTwo";
-export const AboutUs = ({ t }) => {
+const AboutUs = ({ t }) => {
   return (
     <>
       <div className="max-w-[90rem] mx-auto lg:px-8 px-4  text-left "></div>
@@ -13,3 +13,4 @@ export const AboutUs = ({ t }) => {
     </>
   );
 };
+export default AboutUs;

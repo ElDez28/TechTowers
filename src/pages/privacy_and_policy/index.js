@@ -1,9 +1,18 @@
 import React, { useState } from "react";
 import Head from "next/head";
 import Navbar from "@/components/Navbar";
-import SideHero from "@/components/SideHero";
-import PrivacyInfo from "@/components/PrivacyInfo";
-import ContactUs from "@/components/ContactUs";
+// import SideHero from "@/components/SideHero";
+// import PrivacyInfo from "@/components/PrivacyInfo";
+// import ContactUs from "@/components/ContactUs";
+const SideHero = dynamic(() => import("@/components/SideHero"), {
+  loading: () => <p>Loading...</p>,
+});
+const ContactUs = dynamic(() => import("@/components/ContactUs"), {
+  loading: () => <p>Loading...</p>,
+});
+const PrivacyInfo = dynamic(() => import("@/components/PrivacyInfo"), {
+  loading: () => <p>Loading...</p>,
+});
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 const Privacy = () => {

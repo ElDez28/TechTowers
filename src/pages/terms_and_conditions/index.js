@@ -1,11 +1,24 @@
 import { useState } from "react";
-import Navbar from "@/components/Navbar";
-import SideHero from "@/components/SideHero";
-import Head from "next/head";
-import TermsAndConditions from "@/components/TermsAndConditions";
-import ContactUs from "@/components/ContactUs";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import Head from "next/head";
+import Navbar from "@/components/Navbar";
+// import SideHero from "@/components/SideHero";
+// import TermsAndConditions from "@/components/TermsAndConditions";
+// import ContactUs from "@/components/ContactUs";
+const SideHero = dynamic(() => import("@/components/SideHero"), {
+  loading: () => <p>Loading...</p>,
+});
+const ContactUs = dynamic(() => import("@/components/ContactUs"), {
+  loading: () => <p>Loading...</p>,
+});
+const TermsAndConditions = dynamic(
+  () => import("@/components/TermsAndConditions"),
+  {
+    loading: () => <p>Loading...</p>,
+  }
+);
+
 const Terms = () => {
   const [bg, setBg] = useState("transparent");
   const { t: navT } = useTranslation("nav");

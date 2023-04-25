@@ -1,10 +1,23 @@
 import { useState } from "react";
 import Head from "next/head";
-import { OurValues } from "@/components/OurValues";
-import { AboutUs } from "@/components/AboutUs";
-import { Navbar } from "@/components/Navbar";
-import { AboutUsHeader } from "@/components/AboutUsHeader";
-import { ContactUs } from "@/components/ContactUs";
+// import OurValues from "@/components/OurValues";
+// import AboutUs from "@/components/AboutUs";
+import Navbar from "@/components/Navbar";
+// import AboutUsHeader from "@/components/AboutUsHeader";
+// import ContactUs from "@/components/ContactUs";
+const OurValues = dynamic(() => import("@/components/OurValues"), {
+  loading: () => <p>Loading...</p>,
+});
+const ContactUs = dynamic(() => import("@/components/ContactUs"), {
+  loading: () => <p>Loading...</p>,
+});
+const AboutUs = dynamic(() => import("@/components/AboutUs"), {
+  loading: () => <p>Loading...</p>,
+});
+const AboutUsHeader = dynamic(() => import("@/components/AboutUsHeader"), {
+  loading: () => <p>Loading...</p>,
+});
+
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 const About = () => {

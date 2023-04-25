@@ -37,7 +37,7 @@ const FlexItem = ({ title, elements }) => {
     </div>
   );
 };
-export const ContactUs = ({ main }) => {
+const ContactUs = ({ main }) => {
   const [error, setError] = useState(null);
   const [open, setOpen] = useState(false);
   const [success, setSuccess] = useState(false);

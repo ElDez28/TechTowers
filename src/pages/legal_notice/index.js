@@ -1,9 +1,18 @@
 import { useState } from "react";
 import Head from "next/head";
 import Navbar from "@/components/Navbar";
-import SideHero from "@/components/SideHero";
-import LegalInfo from "@/components/LegalInfo";
-import ContactUs from "@/components/ContactUs";
+// import SideHero from "@/components/SideHero";
+// import LegalInfo from "@/components/LegalInfo";
+// import ContactUs from "@/components/ContactUs";
+const SideHero = dynamic(() => import("@/components/SideHero"), {
+  loading: () => <p>Loading...</p>,
+});
+const ContactUs = dynamic(() => import("@/components/ContactUs"), {
+  loading: () => <p>Loading...</p>,
+});
+const LegalInfo = dynamic(() => import("@/components/LegalInfo"), {
+  loading: () => <p>Loading...</p>,
+});
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 const LegalNotice = () => {
