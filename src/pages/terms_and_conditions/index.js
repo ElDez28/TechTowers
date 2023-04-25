@@ -3,6 +3,7 @@ import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Head from "next/head";
 import Navbar from "@/components/Navbar";
+import dynamic from "next/dynamic";
 // import SideHero from "@/components/SideHero";
 // import TermsAndConditions from "@/components/TermsAndConditions";
 // import ContactUs from "@/components/ContactUs";

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Head from "next/head";
 import Navbar from "@/components/Navbar";
+import dynamic from "next/dynamic";
 // import SideHero from "@/components/SideHero";
 // import LegalInfo from "@/components/LegalInfo";
 // import ContactUs from "@/components/ContactUs";

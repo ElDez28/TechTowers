@@ -1,4 +1,5 @@
 import { useState } from "react";
+import dynamic from "next/dynamic";
 import Head from "next/head";
 // import OurValues from "@/components/OurValues";
 // import AboutUs from "@/components/AboutUs";
