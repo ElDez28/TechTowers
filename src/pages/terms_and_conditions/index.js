@@ -4,21 +4,21 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Head from "next/head";
 import Navbar from "@/components/Navbar";
 import dynamic from "next/dynamic";
-// import SideHero from "@/components/SideHero";
-// import TermsAndConditions from "@/components/TermsAndConditions";
-// import ContactUs from "@/components/ContactUs";
-const SideHero = dynamic(() => import("@/components/SideHero"), {
-  loading: () => <p>Loading...</p>,
-});
-const ContactUs = dynamic(() => import("@/components/ContactUs"), {
-  loading: () => <p>Loading...</p>,
-});
-const TermsAndConditions = dynamic(
-  () => import("@/components/TermsAndConditions"),
-  {
-    loading: () => <p>Loading...</p>,
-  }
-);
+import SideHero from "@/components/SideHero";
+import TermsAndConditions from "@/components/TermsAndConditions";
+
+// const SideHero = dynamic(() => import("@/components/SideHero"), {
+//   loading: () => <p>Loading...</p>,
+// });
+// const ContactUs = dynamic(() => import("@/components/ContactUs"), {
+//   loading: () => <p>Loading...</p>,
+// });
+// const TermsAndConditions = dynamic(
+//   () => import("@/components/TermsAndConditions"),
+//   {
+//     loading: () => <p>Loading...</p>,
+//   }
+// );
 
 const Terms = () => {
   const [bg, setBg] = useState("transparent");
@@ -37,7 +37,6 @@ const Terms = () => {
         <Navbar t={navT} bg={bg}></Navbar>
         <SideHero title={termsT("title")} setBg={setBg}></SideHero>
         <TermsAndConditions t={termsT}></TermsAndConditions>
-        <ContactUs></ContactUs>
       </main>
     </>
   );

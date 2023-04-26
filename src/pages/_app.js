@@ -3,22 +3,19 @@ import { appWithTranslation } from "next-i18next";
 import { Raleway } from "next/font/google";
 import Head from "next/head";
 import Script from "next/script";
-import dynamic from "next/dynamic";
+
 import { usePathname, useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 import CookieConsent from "react-cookie-consent";
 import { useRouter } from "next/router";
-const DynamicFooter = dynamic(() => import("@/components/Links"), {
-  loading: () => <p>Loading...</p>,
-});
-
+import Links from "@/components/Links";
+import ContactUs from "@/components/ContactUs";
 const raleway = Raleway({
   subsets: ["latin"],
   variable: "--font-ral",
 });
 const ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS;
-function App({ Component, pageProps, ip }) {
-  console.log(ip);
+function App({ Component, pageProps }) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
@@ -58,7 +55,8 @@ function App({ Component, pageProps, ip }) {
       </Head>
       <main className={`${raleway.variable} font-ral min-h-screen w-full`}>
         <Component {...pageProps} />
-        <DynamicFooter></DynamicFooter>
+        <Links></Links>
+        <ContactUs></ContactUs>
         <CookieConsent
           style={{
             top: "90%",
