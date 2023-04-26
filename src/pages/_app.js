@@ -55,8 +55,8 @@ function App({ Component, pageProps }) {
       </Head>
       <main className={`${raleway.variable} font-ral min-h-screen w-full`}>
         <Component {...pageProps} />
-        <Links></Links>
         <ContactUs></ContactUs>
+        <Links></Links>
         <CookieConsent
           style={{
             top: "90%",
@@ -108,15 +108,5 @@ function App({ Component, pageProps }) {
     </>
   );
 }
-export async function getServerSideProps({ req }) {
-  const forwarded = req.headers["x-forwarded-for"];
-  const ip = forwarded
-    ? forwarded.split(/, /)[0]
-    : req.connection.remoteAddress;
-  return {
-    props: {
-      ip,
-    },
-  };
-}
+
 export default appWithTranslation(App);
